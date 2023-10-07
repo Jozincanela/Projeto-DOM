@@ -1,2 +1,2 @@
 # Projeto-DOM
-Projeto feito por mim, utilizando HTML5, CSS3 e JavaScript, com o objetivo de colocar em prática tudo o que aprendi sobre essas três linguagens até agora. O projeto se baseia em um site de organização de tarefas diárias.
+Projeto feito por mim, utilizando HTML5, CSS3 e JavaScript, com o objetivo de colocar em prática tudo o que aprendi sobre essas três linguagens até agora. O projeto se baseia em um site de organização de tarefas diárias.//Project made by me, using HTML5, CSS3, and JavaScript, with the goal of putting into practice everything I've learned about these three languages so far. The project is based on a daily task organization websitte.e.
