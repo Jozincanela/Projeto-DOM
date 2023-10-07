@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Young+Serif&display=swap" rel="stylesheet">
+    <title>Organize Seu dia!</title>
+</head>
+<body>
+    <div class="formulario">
+        <h1 id="Instrucao" class="Conteudo" style="color: white;">Organizando o dia!</h1>
+        <input type="text" id="nome_tarefa" class="Conteudo" placeholder="Nome da tarefa" style="height: 25px">
+        <input type="text" id="Descricao" class="Conteudo" placeholder="Descrição" style="height: 25px">
+        <button id="botao_submit" onclick="Salvar()" class="Conteudo" ></button>
+          
+    </div>
+    <div id="ListaTarefas">
+            
+    </div>
+    
+
+
+    <script>
+        let lista_de_Tarefas = []
+        let contagem = 0  
+
+        function Salvar (){
+            try{
+                let dicio = {
+                    "Nome_Tarefa": document.getElementById("nome_tarefa").value,
+                    "Descrição": document.getElementById("Descricao").value
+                }
+                if ( document.getElementById("Descricao").value.length > 40){
+                    alert("Descrição muito longa!")
+                }
+                else if (document.getElementById("nome_tarefa").value.length == 0){
+                    alert("Sem Titulo de tarefa!")
+                }
+                else{
+                    lista_de_Tarefas.push(dicio)  
+                var div_geral = document.getElementById("ListaTarefas")
+                var Nometarefa = document.createTextNode(lista_de_Tarefas[contagem].Nome_Tarefa);
+                var Descricao_ = document.createTextNode("Descrição: " +lista_de_Tarefas[contagem].Descrição);
+
+                var tarefa = document.createElement("h2")
+                tarefa.id = 'tarefa_pop_up'
+                tarefa.className = 'textos'
+                tarefa.appendChild(Nometarefa)
+
+                var descricao = document.createElement("p")
+                descricao.id = 'tarefa_pop_up'
+                descricao.className ='textos'
+                descricao.appendChild(Descricao_)
+
+                var Fechar = document.createElement("button");
+                
+                Fechar.id = 'Botao_Fechar'
+                
+                
+                var feito =  document.createElement("input")
+                feito.type = "checkbox"
+                feito.id = "Feito"
+                
+
+                var divNova = document.createElement("div");
+                divNova.className = 'tarefa'
+                let nome_div = 'tarefa' + String(contagem)
+                divNova.id = nome_div
+                divNova.appendChild(tarefa);
+                divNova.appendChild(descricao);
+                divNova.appendChild(Fechar);
+                divNova.appendChild(feito);
+
+                Fechar.onclick =function(){
+                    Concluido(nome_div)
+                }
+            
+                div_geral.insertAdjacentElement("beforeend", divNova);
+                contagem++
+
+                }
+            }
+            catch{
+                alert("Erro não salvo!")
+            }
+        }
+        function Concluido(Nome_da_div){
+            document.getElementById(Nome_da_div).remove()
+        }
+    </script>
+</body>
+</html>

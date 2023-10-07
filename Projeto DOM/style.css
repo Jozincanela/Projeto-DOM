@@ -1,0 +1,101 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #333333;
+}
+
+.formulario {
+    font-family: 'Young Serif', serif;
+    position: static;
+    border-radius: 30px;
+    background: #3498db;
+    height: 150px;
+    width: auto;
+}
+.Conteudo{
+    position: relative;
+    left: 40%;
+    top: 15%;
+}
+#botao_submit{
+    width: 50px;
+    height: 25px;
+    position: relative;
+    top: 20%;
+    background-image: url('images/icons8-plus-50.png'); 
+    background-size: contain; 
+    background-repeat: no-repeat; 
+    background-position: center; 
+    border: none;  
+    cursor: pointer;
+    border-radius: 30px;
+
+}
+
+
+#ListaTarefas{
+    
+    background-color: #00cc99;
+    height: 700px;
+    width: 1000px;
+    border-radius: 30px;
+    border: 3px solid white;
+    position: relative;
+    left: 25%;
+    overflow: auto;
+}
+.tarefa{
+    color: white;
+    border: 3px solid black;
+    border-radius: 15px;
+    background-color: #f5f5f5;
+    width: 700px;
+    height: 100px;
+    position: relative;
+    left: 15%;
+    top: 2%;
+    
+}
+#Botao_Fechar {
+    width: 91px; 
+    height: 94px;  
+    background-image: url('images/icons8-lixeira-100.png'); 
+    background-size: 30px; 
+    background-repeat: no-repeat; 
+    background-position: center; 
+    border: none;  
+    cursor: pointer; 
+    background-color: rgba(255, 0, 0, 0.726);
+    position: relative;
+    left: 87%;
+    bottom: 60%;
+    border-radius: 13px;
+}
+#Botao_feito{
+    height: 25px;
+    width: auto;
+
+}       
+.textos{
+    font-family: 'Young Serif', serif;
+    width: fit-content;
+    position: relative;
+    left: 12%;
+    top: 15%;
+}
+#Feito{
+    height: 50px;
+    width: 25px;
+    position: relative;
+    left: 65%;
+    bottom: 83%;
+}
+
+#tarefa_pop_up{
+    color: black;
+}
+
